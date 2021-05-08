@@ -1,0 +1,13 @@
+{"name":"Mike Greer","address":"Elm street 141","email":"mikegreer@gmail.com","balance":0,"created_at":{"$$date":1620478642773},"_id":"7CJPAT1Ymr3ZULo7"}
+{"name":"Luiz Carlos","address":"Rua 42","email":"luiz@gmail.com","phone":"85988887575","balance":15500,"_id":"AiG8vqkEsIUS5KoM"}
+{"name":"Mike Greer","address":"Elm street 141","email":"mikegreer@gmail.com","balance":1,"_id":"Zur9JhNPMQ8TiOY9"}
+{"name":"Mike Greer","address":"Elm street 1000","email":"mikegreer@gmail.com","balance":10200,"created_at":{"$$date":1620478807638},"updated_at":{"$$date":1620478807638},"_id":"hmCd2KHvmcqLBrXM"}
+{"name":"Mike Greer","address":"Elm street 141","email":"mikegreer@gmail.com","balance":58,"created_at":{"$$date":1620479060182},"updated_at":{"$$date":1620479060182},"_id":"qoabuDDWwwk6sIST"}
+{"name":"Jose Carlos","address":"Rua 43","email":"jose@gmail.com","phone":"85996565588","balance":23000,"_id":"s4CLRlt1YfafEYZQ"}
+{"name":"Suzana Matias","address":"Rua 41","email":"liriodegraca@gmail.com","balance":100,"updated_at":{"$$date":1620479563191},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
+{"name":"Carlos Antonio Matias da Silva","address":"Rua 41","email":"kartmatias@gmail.com","balance":0,"updated_at":{"$$date":1620479583912},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
+{"name":"Carlos Antonio Matias da Silva","address":"Rua 41","email":"kartmatias@gmail.com","balance":100,"updated_at":{"$$date":1620479583912},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
+{"name":"Carlos Antonio Matias da Silva","address":"Rua 41","email":"kartmatias@gmail.com","balance":200,"updated_at":{"$$date":1620479583912},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
+{"name":"Carlos Antonio Matias da Silva","address":"Rua 41","email":"kartmatias@gmail.com","balance":300,"updated_at":{"$$date":1620479583912},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
+{"name":"Carlos Antonio Matias da Silva","address":"Rua 41","email":"kartmatias@gmail.com","balance":400,"updated_at":{"$$date":1620479583912},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
+{"name":"Carlos Antonio Matias da Silva","address":"Rua 41","email":"kartmatias@gmail.com","balance":500,"updated_at":{"$$date":1620479583912},"created_at":{"$$date":1620479563191},"_id":"A9OdyKBnSYsfHwTn"}
