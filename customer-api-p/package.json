@@ -2,8 +2,13 @@
   "name": "customer",
   "version": "1.0.0",
   "description": "code evaluation",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
+    "start": "npm run server",
+    "server": "node build/src/server.js",
+    "watch-node": "nodemon build/src/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run gulp-watch\" \"npm run watch-node\"",
+    "clean-build": "echo \"Cleaning build/** folder\" & gulp clean:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,10 +27,26 @@
   },
   "homepage": "https://github.com/kartmatias/coding_evaluating_node_api#readme",
   "dependencies": {
+    "@types/node": "^15.0.2",
+    "app-root-path": "^3.0.0",
+    "cli-table": "^0.3.6",
+    "cors": "^2.8.5",
+    "events": "^3.3.0",
     "express": "^4.17.1",
-    "moleculer": "^0.14.13",
+    "express-list-endpoints": "^5.0.0",
+    "express-winston": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.6",
+    "mongoose": "^5.12.7",
     "nodemon": "^2.0.7",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "tyboost": "^2.0.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.11",
+    "@types/jsonwebtoken": "^8.5.1",
+    "typescript": "^4.2.4"
   }
 }

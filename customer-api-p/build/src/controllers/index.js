@@ -1,0 +1,13 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const default_1 = __importDefault(require("./default"));
+const ping_1 = __importDefault(require("./ping"));
+const mongo_1 = __importDefault(require("./mongo"));
+exports.default = {
+    defaultController: default_1.default,
+    pingController: ping_1.default,
+    mongoController: mongo_1.default,
+};
