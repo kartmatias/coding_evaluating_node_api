@@ -1,10 +1,10 @@
 import { Connections, constants, config } from "../utils";
 import * as mongoose from "mongoose";
 
-export default class Users {
+export default class Customers {
 
-    public static Users;
-    private usersModel;
+    public static Customers;
+    private customersModel;
     readonly collectionName;
 
     constructor() {
@@ -12,12 +12,12 @@ export default class Users {
         this.setDbModel();
     }
 
-    public static getInstance(): Users {
-        if (!this.Users) {
-            this.Users = new Users();
-            return this.Users;
+    public static getInstance(): Customers {
+        if (!this.Customers) {
+            this.Customers = new Customers();
+            return this.Customers;
         }
-        return this.Users;
+        return this.Customers;
     }
 
     private setDbModel() {
@@ -31,7 +31,7 @@ export default class Users {
         {
             collection:  this.collectionName
         });
-        this.usersModel = mongoConnection.model(
+        this.customersModel = mongoConnection.model(
             this.collectionName,
             bodDetailsSchema
         );
@@ -40,7 +40,7 @@ export default class Users {
     public async getAllUsers() {
         const queryFilter = {
         };
-        return  await this.usersModel.find(queryFilter, {}, {lean: true});
+        return  await this.customersModel.find(queryFilter, {}, {lean: true});
     }
 
 }

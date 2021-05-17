@@ -1,5 +1,3 @@
-const express = require('express')
-const tyboost = require('tyboost')
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as listEndpoints from "express-list-endpoints";
@@ -9,12 +7,14 @@ import allRouter from "../routes";
 import allInitializer from "./initializers";
 import  { logger, constants } from "../utils";
 
-// initialise express app with tyboost - https://www.npmjs.com/package/tyboost
+const express = require('express')
+const tyboost = require('tyboost')
+
 logger.info(`BOOT :: App is starting with environment :: ${constants.ENV}`);
 logger.info(`BOOT :: Initialising express app with tyboost`);
+
 const app = tyboost(express());
 
-// register application level middleware
 const registerCoreMiddleware = function (): void {
     try {
         logger.info(`BOOT :: Registering core middleware started`);
@@ -33,7 +33,6 @@ const registerCoreMiddleware = function (): void {
     }
 };
 
-// register all routes in routes/index
 const registerRoutes =  (routers: object): void  => {
     try {
         if (Object.keys(routers) && Object.keys(routers).length) {
@@ -80,14 +79,10 @@ const handleError  = (): void => {
     });
 };
 
-// start application
 const startApp  = async (): Promise<void> => {
     try {
-        // register core application level middleware
         registerCoreMiddleware();
-        // register routes
         registerRoutes(allRouter ? allRouter : {});
-        // register all the initializer
         registerInitializers(allInitializer ? allInitializer : {});
         logger.info(`BOOT :: Booting application started`);
         await app.boot();
@@ -97,7 +92,6 @@ const startApp  = async (): Promise<void> => {
             if (error.syscall !== "listen") {
                 throw error;
             }
-            // handle specific listen errors with friendly messages
             switch (error.code) {
                 case "EACCES":
                     logger.error(`BOOT :: ${constants.HOST}:${constants.PORT} requires elevated privileges`);
@@ -112,7 +106,7 @@ const startApp  = async (): Promise<void> => {
             }
         })
             .on("listening", () => {
-                logger.info(`BOOT :: <> <> <> <> <> <> <> <> <> <> Listening on ${constants.HOST}:${constants.PORT} <> <> <> <> <> <> <> <> <> <>`);
+                logger.info(`BOOT :: Listening on ${constants.HOST}:${constants.PORT}`);
             });
 
         // exit on uncaught exception
