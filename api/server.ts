@@ -29,15 +29,20 @@ if (!process.env.DEBUG) {
     loggerOptions.meta = false;
 }
 app.use(expressWinston.logger(loggerOptions));
+
 routes.push(new CustomersRoutes(app));
+
 const runningMessage = `Server running at http://localhost:${port}`;
+
 app.get('/', (req: express.Request, res: express.Response) => {
     res.status(200).send(runningMessage)
 });
 
 server.listen(port, () => {
     routes.forEach((route: RoutesConfig) => {
+        route.configure();
         debugLog(`Routes for ${route.getName()}`);
+        console.log(`Routes for ${route.getName()}`);
     });
     console.log(runningMessage);
 });

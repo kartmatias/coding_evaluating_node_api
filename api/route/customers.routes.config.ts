@@ -8,10 +8,10 @@ export class CustomersRoutes extends RoutesConfig {
     configure(): express.Application {
         this.app.route('/customers')
         .get((req: express.Request, res: express.Response) => {
-            res.status(200).send('Lista de usuários');
+            res.status(200).send('Customer list');
         })
         .post((req: express.Request, res: express.Response) => {
-            res.status(200).send('Post to users');
+            res.status(200).send('Post to customers');
         });
 
         this.app.route('/customers/:customerId')

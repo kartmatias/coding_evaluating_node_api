@@ -14,10 +14,12 @@
   "author": "Carlos Matias",
   "license": "ISC",
   "dependencies": {
+    "@types/mongodb": "^3.6.12",
     "cors": "^2.8.5",
     "debug": "^4.3.1",
     "express": "^4.17.1",
     "express-winston": "^4.1.0",
+    "mongodb": "^3.6.6",
     "winston": "^3.3.3"
   },
   "devDependencies": {

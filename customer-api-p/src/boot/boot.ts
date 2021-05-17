@@ -1,8 +1,7 @@
 const express = require('express')
 const tyboost = require('tyboost')
-var cors = require('cors')
-
 import * as bodyParser from "body-parser";
+import * as cors from "cors";
 import * as listEndpoints from "express-list-endpoints";
 import * as Table from "cli-table";
 
